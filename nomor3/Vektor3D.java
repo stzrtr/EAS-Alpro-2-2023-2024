@@ -33,16 +33,12 @@ public class Vektor3D {
     }
     // Jawaban nomor 3e
     public double EuclidDist(Vektor3D V1) {
-        int x = V1.getX()-this.getX(); // x2-x1 = x
-        int y = V1.getY()-this.getY(); // y2-y1 = y
-        int z = V1.getZ()-this.getZ(); // z2-z1 = z
-        return Math.sqrt((x*x)+(y*y)+(z*z)); // sqrt(x^2 + y^2 + z^2)
+        double e0 = Math.sqrt((this.getX()*this.getX())+(this.getY()*this.getY())+(this.getZ()*this.getZ())); // Cari panjang vektor yang diuji.
+        double e1 = Math.sqrt((V1.getX()*V1.getX())+(V1.getY()*V1.getY())+(V1.getZ()*V1.getZ())); // Cari panjang vektor tujuannya.
+        return e0+e1; // Hasil panjangnya sendiri.
     }
     // Jawaban nomor 3f
-    public boolean IsVektorNol(Vektor3D V1) {
-        if (V1.getX()-this.getX() == 0 && V1.getY()-this.getY() == 0 && V1.getZ()-this.getZ() == 0) {
-            return true;
-        }
-        return false;
+    public boolean IsVektorNol() {
+        return this.x == 0 && this.y == 0 && this.z == 0; // Jika ketiganya memenuhi, maka return true.
     }
 }
