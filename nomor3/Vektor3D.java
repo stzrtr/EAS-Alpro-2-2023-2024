@@ -35,7 +35,7 @@ public class Vektor3D {
     public double EuclidDist(Vektor3D V1) {
         double e0 = Math.sqrt((this.getX()*this.getX())+(this.getY()*this.getY())+(this.getZ()*this.getZ())); // Cari panjang vektor yang diuji.
         double e1 = Math.sqrt((V1.getX()*V1.getX())+(V1.getY()*V1.getY())+(V1.getZ()*V1.getZ())); // Cari panjang vektor tujuannya.
-        return e0+e1; // Hasil panjangnya sendiri.
+        return e1-e0; // Hasil panjangnya sendiri.
     }
     // Jawaban nomor 3f
     public boolean IsVektorNol() {
