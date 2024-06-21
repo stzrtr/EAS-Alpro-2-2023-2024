@@ -19,7 +19,7 @@ public class HargaDiskon extends Barang {
         // Jawaban nomor 1b
         if (jumlBarang >= 10) {
             // Kalau beli 10 atau lebih dapat diskon
-            return this.getHarga()*jumlBarang*diskon;
+            return (this.getHarga()*jumlBarang)-(this.getHarga()*jumlBarang*diskon);
         }
         // Kalau beli kurang dari 10 dapat harga normal
         return this.getHarga()*jumlBarang;
